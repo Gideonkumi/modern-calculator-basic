@@ -2,41 +2,63 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Modern Calculator Design System - All colors MUST be HSL */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Modern gradient background */
+    --background: 250 100% 97%;
+    --foreground: 240 20% 15%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Calculator glassmorphism */
+    --calculator-bg: 250 50% 95%;
+    --calculator-border: 250 30% 85%;
+    
+    /* Button system */
+    --button-primary: 260 75% 60%;
+    --button-primary-hover: 260 75% 55%;
+    --button-primary-foreground: 0 0% 100%;
+    
+    --button-secondary: 240 10% 85%;
+    --button-secondary-hover: 240 15% 80%;
+    --button-secondary-foreground: 240 20% 15%;
+    
+    --button-operator: 280 85% 65%;
+    --button-operator-hover: 280 85% 60%;
+    --button-operator-foreground: 0 0% 100%;
+    
+    --button-danger: 0 75% 60%;
+    --button-danger-hover: 0 75% 55%;
+    --button-danger-foreground: 0 0% 100%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    /* Navigation */
+    --nav-bg: 250 50% 98%;
+    --nav-border: 250 20% 90%;
+    
+    /* Display */
+    --display-bg: 240 30% 96%;
+    --display-text: 240 30% 10%;
+    
+    /* Cards and surfaces */
+    --card: 250 50% 98%;
+    --card-foreground: 240 20% 15%;
+    --card-border: 250 20% 90%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(260 75% 60%), hsl(280 85% 65%));
+    --gradient-background: linear-gradient(135deg, hsl(250 100% 97%), hsl(260 50% 95%));
+    --gradient-glass: linear-gradient(135deg, hsla(250 50% 95% / 0.8), hsla(260 40% 90% / 0.6));
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Shadows */
+    --shadow-glass: 0 8px 32px hsla(260 50% 40% / 0.1);
+    --shadow-button: 0 4px 16px hsla(260 50% 40% / 0.15);
+    --shadow-display: inset 0 2px 8px hsla(240 30% 40% / 0.1);
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Animation */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
+    --radius: 1rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -101,5 +123,26 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    background: var(--gradient-background);
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .glass-effect {
+    background: var(--gradient-glass);
+    backdrop-filter: blur(20px);
+    border: 1px solid hsla(250 30% 85% / 0.3);
+    box-shadow: var(--shadow-glass);
+  }
+  
+  .calculator-button {
+    @apply rounded-2xl font-semibold text-lg transition-all duration-300 active:scale-95;
+    box-shadow: var(--shadow-button);
+  }
+  
+  .calculator-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px hsla(260 50% 40% / 0.2);
   }
 }

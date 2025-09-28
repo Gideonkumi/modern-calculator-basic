@@ -1,11 +1,24 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Navigation from "@/components/Navigation";
+import Calculator from "@/components/Calculator";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <div className="min-h-screen p-6">
+      <div className="max-w-6xl mx-auto">
+        <Navigation />
+        
+        <div className="text-center mb-12">
+          <h1 className="text-6xl font-bold text-foreground mb-4">
+            Modern Calculator
+          </h1>
+          <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
+            A beautiful, feature-rich calculator with glassmorphism design and smooth animations.
+          </p>
+        </div>
+
+        <div className="flex justify-center">
+          <Calculator />
+        </div>
       </div>
     </div>
   );

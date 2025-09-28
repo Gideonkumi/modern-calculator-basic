@@ -19,33 +19,67 @@ export default {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        
+        // Calculator button system
+        "button-primary": {
+          DEFAULT: "hsl(var(--button-primary))",
+          hover: "hsl(var(--button-primary-hover))",
+          foreground: "hsl(var(--button-primary-foreground))",
+        },
+        "button-secondary": {
+          DEFAULT: "hsl(var(--button-secondary))",
+          hover: "hsl(var(--button-secondary-hover))",
+          foreground: "hsl(var(--button-secondary-foreground))",
+        },
+        "button-operator": {
+          DEFAULT: "hsl(var(--button-operator))",
+          hover: "hsl(var(--button-operator-hover))",
+          foreground: "hsl(var(--button-operator-foreground))",
+        },
+        "button-danger": {
+          DEFAULT: "hsl(var(--button-danger))",
+          hover: "hsl(var(--button-danger-hover))",
+          foreground: "hsl(var(--button-danger-foreground))",
+        },
+        
+        // Calculator surfaces
+        "calculator-bg": "hsl(var(--calculator-bg))",
+        "calculator-border": "hsl(var(--calculator-border))",
+        "display-bg": "hsl(var(--display-bg))",
+        "display-text": "hsl(var(--display-text))",
+        
+        // Navigation
+        "nav-bg": "hsl(var(--nav-bg))",
+        "nav-border": "hsl(var(--nav-border))",
+        
         primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
+          DEFAULT: "hsl(var(--button-primary))",
+          foreground: "hsl(var(--button-primary-foreground))",
         },
         secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
+          DEFAULT: "hsl(var(--button-secondary))",
+          foreground: "hsl(var(--button-secondary-foreground))",
         },
         destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
+          DEFAULT: "hsl(var(--button-danger))",
+          foreground: "hsl(var(--button-danger-foreground))",
         },
         muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
+          DEFAULT: "hsl(var(--button-secondary))",
+          foreground: "hsl(var(--button-secondary-foreground))",
         },
         accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
+          DEFAULT: "hsl(var(--button-operator))",
+          foreground: "hsl(var(--button-operator-foreground))",
         },
         popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
+          DEFAULT: "hsl(var(--calculator-bg))",
+          foreground: "hsl(var(--foreground))",
         },
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
+          border: "hsl(var(--card-border))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
